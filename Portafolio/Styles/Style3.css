@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+body {
+    background: -webkit-radial-gradient(#0074D9, #001F3F);
+    font-family: Poppins;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #FEEDE6;
+}
+
+.header {
+    font-family: 'Nunito';
+    background: -webkit-radial-gradient(#2E4053, #1C2833);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.313rem;
+    padding: 0.313rem 10%;
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img {
+    height: 4.375rem;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+.header .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0.625rem 0;
+    padding: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.header .nav-links li {
+    padding: 0px 3.125rem;
+}
+
+.header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.header .nav-links a {
+    font-size: 1.25rem;
+    color: #eceff1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header .nav-links li a:hover {
+    color: #ffbc0e;
+}
+
+.texto3{
+    text-align: center;
+    font-size: 5rem;
+
+}
+.contenedor-tres-espacios {
+    display: flex;
+    height: 50vh; /* Ajusta la altura según tus necesidades */
+}
+
+.espacio {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    height: 50vh;
+}
+
+.imagen-con-texto {
+    position: relative;
+    margin-right: 7rem;
+    margin-left: 7rem;
+    max-width: 30rem;
+    height: auto;
+}
+
+.imagen {
+    max-width: 20rem;
+    height: auto;
+    transition: transform 0.3s;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+.imagen-con-texto:hover .imagen {
+    transform: scale(0.95); /* Aplica una animación de escala al colocar el puntero sobre la imagen */
+}
+
+.imagen-con-texto:hover .overlay {
+    opacity: 5; /* Muestra el fondo oscuro con texto */
+}
+
+.texto1{
+    font-size: 1.3rem;
+    padding: 0 .5rem;
+}
+
+.texto2{
+    font-size: 1.2rem;
+    padding: 0 .5rem;
+}
+
+footer {
+    background: -webkit-radial-gradient(#2E4053, #1C2833);
+    color: #FEEDE6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.625rem;
+    margin-top: auto;
+    font-size: 0.875rem;
+}
+
+.textof {
+    color: white;
+    margin-left: auto;
+    padding-right: 1.25rem;
+}
+
+.logos {
+    cursor: pointer;
+}
+
+.logos img {
+    padding: 0.438rem 0.625rem;
+    height: 1.875rem;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.logos img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 1000px) {
+    .header .nav-links a {
+        font-size: 1rem;
+        padding: 0 .5rem;
+    }
+    
+    .header .nav-links {
+        
+        align-items: right;
+    }
+
+    .header .nav-links li {
+        padding: 0.625rem 0;
+        display: inline-block;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header .nav-links a {
+        font-size: 0.875rem;
+        padding: 0 .5rem;
+    }
+    
+    .header .nav-links {
+        
+        align-items: right;
+    }
+
+    .header .nav-links li {
+        padding: 0.625rem 0;
+        display: inline-block;
+    }
+}
