@@ -1,0 +1,69 @@
+.navbar {
+  background-color: #0a1120; /* más oscuro que el fondo principal */
+  color: #f1f5f9;
+  padding: 1rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* sombra más marcada */
+  border-bottom: 1px solid #1e3a8a; /* línea azul sutil */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-left: 4rem; /* mueve el logo hacia la derecha */
+}
+
+.logoImage {
+  height: 60px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: #f1f5f9;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.link {
+  color: #f1f5f9;
+  text-decoration: none;
+  font-weight: 1000;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #38bdf8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .links.open {
+    display: flex;
+  }
+}

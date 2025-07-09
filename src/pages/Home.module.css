@@ -1,0 +1,152 @@
+.home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 64px);
+  background-color: transparent;
+  color: #f1f5f9;
+  overflow: hidden;
+
+}
+
+.home::before,
+.home::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2; /* más visible */
+  z-index: -1;
+  filter: blur(30px); /* menos difuso */
+  animation-duration: 12s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.home::before {
+  width: 300px;
+  height: 300px;
+  background: #38bdf8;
+  top: 50px;
+  left: 50px;
+  animation-name: floatLeft;
+}
+
+.home::after {
+  width: 200px;
+  height: 200px;
+  background: #0ea5e9;
+  bottom: 50px;
+  right: 50px;
+  animation-name: floatRight;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.text {
+  flex: 1;
+  min-width: 280px;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.title span {
+  color: #38bdf8;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.button {
+  background-color: #38bdf8;
+  color: #0f172a;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0ea5e9;
+}
+
+.imageWrapper {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.image {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatLeft {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-30px, 40px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatRight {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, -35px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.cardBox {
+  background-color: #1e293b; /* tono más claro que el fondo general */
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  max-width: 1100px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
